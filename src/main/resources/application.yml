@@ -1,0 +1,27 @@
+jwt:
+  secret: '#xYsv3V8&XV+3f8ZFWeL!gYh&-P!npVx8*+hpGUQK29CYV*7J!'
+
+server:
+  port: 8080
+#  error:
+#    whitelabel:
+#      enabled: true
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/registration
+    username: postgres
+    password: admin
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+#  mvc:
+#    throw-exception-if-no-handler-found: true
+#  web:
+#    resources:
+#      add-mappings: false
+
