@@ -5,6 +5,7 @@ import java.io.Serializable;
 import java.util.Date;
 
 @Entity
+@Table(name = "users")
 public class User implements Serializable {
 
     @Id
@@ -22,7 +23,7 @@ public class User implements Serializable {
     private Date lastLoginDate; //last login date
     private Date lastLoginDateDisplay;
     private Date joinDate;
-    private String[] roles; //ROLE_USER { read, edit }, ROLE_ADMIN { delete, update, create }
+    private String role; //ROLE_USER { read, edit }, ROLE_ADMIN { delete, update, create }
     private String[] authorities; //{ delete, update, create } roles call authorities
     private boolean isActive; //is active
     private boolean isNotLocked; //is not locked
@@ -33,7 +34,7 @@ public class User implements Serializable {
     public User(Long id, String userId, String firstName,
                 String lastName, String username, String password,
                 String email, String profileImageUrl, Date lastLoginDate,
-                Date lastLoginDateDisplay, Date joinDate, String[] roles,
+                Date lastLoginDateDisplay, Date joinDate, String role,
                 String[] authorities, boolean isActive, boolean isNotLocked) {
 
         this.id = id;
@@ -47,7 +48,7 @@ public class User implements Serializable {
         this.lastLoginDate = lastLoginDate;
         this.lastLoginDateDisplay = lastLoginDateDisplay;
         this.joinDate = joinDate;
-        this.roles = roles;
+        this.role = role;
         this.authorities = authorities;
         this.isActive = isActive;
         this.isNotLocked = isNotLocked;
@@ -141,12 +142,12 @@ public class User implements Serializable {
         this.joinDate = joinDate;
     }
 
-    public String[] getRoles() {
-        return roles;
+    public String getRole() {
+        return role;
     }
 
-    public void setRoles(String[] roles) {
-        this.roles = roles;
+    public void setRole(String role) {
+        this.role = role;
     }
 
     public String[] getAuthorities() {

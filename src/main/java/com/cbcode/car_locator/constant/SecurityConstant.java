@@ -15,7 +15,7 @@ public class SecurityConstant {
     public static final String TOKEN_PREFIX = "Bearer "; // Verifying the token header
     public static final String JWT_TOKEN_HEADER = "Jwt-Token"; // custom header
     public static final String TOKEN_CANNOT_BE_VERIFIED = "Token cannot be verified"; // message response
-    public static final String GET_ARRAYS_LLC = "Get Arrays, LLC"; // company given access
+    public static final String CB_CODE = "CB Code"; // company given access
     public static final String GET_ARRAYS_ADMINISTRATION = "User Management Portal";
     public static final String AUTHORITIES = "authorities";
     public static final String FORBIDDEN_MESSAGE = "You need to log in to access this page";

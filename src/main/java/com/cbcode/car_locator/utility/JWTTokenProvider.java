@@ -33,7 +33,7 @@ public class JWTTokenProvider {
     public String generateJwtToken(UserPrincipal userPrincipal) {
         String[] claims = getClaimsFromUser(userPrincipal);
         return JWT.create()
-                .withIssuer(GET_ARRAYS_LLC)
+                .withIssuer(CB_CODE)
                 .withAudience(GET_ARRAYS_ADMINISTRATION)
                 .withIssuedAt(new Date())
                 .withSubject(userPrincipal.getUsername())
@@ -78,7 +78,7 @@ public class JWTTokenProvider {
         JWTVerifier verifier;
         try {
             Algorithm algorithm = HMAC512(secret);
-            verifier = JWT.require(algorithm).withIssuer(GET_ARRAYS_LLC).build();
+            verifier = JWT.require(algorithm).withIssuer(CB_CODE).build();
         } catch (JWTVerificationException exception) {
             throw new JWTVerificationException(TOKEN_CANNOT_BE_VERIFIED);
         }
