@@ -5,11 +5,12 @@ import com.cbcode.car_locator.exception.domain.EmailExistException;
 import com.cbcode.car_locator.exception.domain.UserNotFoundException;
 import com.cbcode.car_locator.exception.domain.UsernameExistException;
 
+import javax.mail.MessagingException;
 import java.util.List;
 
 public interface UserService {
 
-    User register(String firstName, String lastName, String username, String email) throws UserNotFoundException, EmailExistException, UsernameExistException;
+    User register(String firstName, String lastName, String username, String email) throws UserNotFoundException, EmailExistException, UsernameExistException, MessagingException;
 
     List<User> getUsers();
 
