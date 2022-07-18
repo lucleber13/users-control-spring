@@ -18,6 +18,5 @@ public class EmailService {
         properties.put(SMTP_STARTTLS_ENABLE, true);
         properties.put(SMTP_STARTTLS_REQUIRED, true);
         return Session.getInstance(properties, null);
-
     }
 }
