@@ -34,7 +34,7 @@ public class JWTTokenProvider {
         String[] claims = getClaimsFromUser(userPrincipal);
         return JWT.create()
                 .withIssuer(CB_CODE)
-                .withAudience(GET_ARRAYS_ADMINISTRATION)
+                .withAudience(GET_CBCODE_ADMINISTRATION)
                 .withIssuedAt(new Date())
                 .withSubject(userPrincipal.getUsername())
                 .withArrayClaim(AUTHORITIES,claims)
