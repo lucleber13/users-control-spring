@@ -53,6 +53,7 @@ public class UserResource extends ExceptionHandling {
         return new ResponseEntity<>(newUser, OK);
     }
 
+    @PostMapping("/add")
     public ResponseEntity<User> addNewUser(User user){
         return null;
     }
