@@ -53,7 +53,7 @@ public class UserResource extends ExceptionHandling {
         return new ResponseEntity<>(newUser, OK);
     }
 
-    public ResponseEntity<User> addNewUser(){
+    public ResponseEntity<User> addNewUser(User user){
         return null;
     }
 
